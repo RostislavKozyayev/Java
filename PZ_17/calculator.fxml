@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app_javafx.controller.CalculatorController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <TextField fx:id="displayField" prefHeight="50" prefWidth="200"
+               style="-fx-font-size: 18; -fx-alignment: center-right;"/>
+
+    <GridPane hgap="5" vgap="5">
+        <columnConstraints>
+            <ColumnConstraints prefWidth="50"/>
+            <ColumnConstraints prefWidth="50"/>
+            <ColumnConstraints prefWidth="50"/>
+            <ColumnConstraints prefWidth="50"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="50"/>
+            <RowConstraints prefHeight="50"/>
+            <RowConstraints prefHeight="50"/>
+            <RowConstraints prefHeight="50"/>
+            <RowConstraints prefHeight="50"/>
+        </rowConstraints>
+
+        <!-- Первый ряд -->
+        <Button text="7" onAction="#handleButton" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Button text="8" onAction="#handleButton" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Button text="9" onAction="#handleButton" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+        <Button text="/" onAction="#handleButton" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+        <!-- Второй ряд -->
+        <Button text="4" onAction="#handleButton" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Button text="5" onAction="#handleButton" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Button text="6" onAction="#handleButton" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+        <Button text="*" onAction="#handleButton" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+        <!-- Третий ряд -->
+        <Button text="1" onAction="#handleButton" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Button text="2" onAction="#handleButton" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Button text="3" onAction="#handleButton" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+        <Button text="-" onAction="#handleButton" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+        <!-- Четвертый ряд -->
+        <Button text="0" onAction="#handleButton" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Button text="." onAction="#handleButton" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Button text="=" onAction="#handleEquals" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+        <Button text="+" onAction="#handleButton" GridPane.rowIndex="4" GridPane.columnIndex="3"/>
+
+        <!-- Пятый ряд -->
+        <Button text="C" onAction="#handleClear" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                GridPane.columnSpan="4" prefWidth="215"/>
+    </GridPane>
+</VBox>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app_javafx.controller.ColorMixerController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Rectangle fx:id="colorRect" width="200" height="200"
+               style="-fx-stroke: black; -fx-stroke-width: 2;"/>
+
+    <VBox spacing="10" alignment="CENTER_LEFT">
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Красный:" style="-fx-font-size: 14;"/>
+            <Slider fx:id="redSlider" min="0" max="255" value="128" prefWidth="200"/>
+            <Label fx:id="redValue" text="128" style="-fx-font-size: 14; -fx-min-width: 30;"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Зеленый:" style="-fx-font-size: 14;"/>
+            <Slider fx:id="greenSlider" min="0" max="255" value="128" prefWidth="200"/>
+            <Label fx:id="greenValue" text="128" style="-fx-font-size: 14; -fx-min-width: 30;"/>
+        </HBox>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Синий:" style="-fx-font-size: 14;"/>
+            <Slider fx:id="blueSlider" min="0" max="255" value="128" prefWidth="200"/>
+            <Label fx:id="blueValue" text="128" style="-fx-font-size: 14; -fx-min-width: 30;"/>
+        </HBox>
+    </VBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="RGB:" style="-fx-font-size: 14;"/>
+        <Label fx:id="rgbValue" text="(128, 128, 128)" style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+    </HBox>
+</VBox>
