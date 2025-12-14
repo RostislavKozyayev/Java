@@ -46,13 +46,9 @@
         <Button text="-" onAction="#handleButton" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
 
         <!-- Четвертый ряд -->
-        <Button text="0" onAction="#handleButton" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-        <Button text="." onAction="#handleButton" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Button text="C" onAction="#handleClear" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Button text="0" onAction="#handleButton" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
         <Button text="=" onAction="#handleEquals" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
         <Button text="+" onAction="#handleButton" GridPane.rowIndex="4" GridPane.columnIndex="3"/>
-
-        <!-- Пятый ряд -->
-        <Button text="C" onAction="#handleClear" GridPane.rowIndex="0" GridPane.columnIndex="0"
-                GridPane.columnSpan="4" prefWidth="215"/>
     </GridPane>
 </VBox>
