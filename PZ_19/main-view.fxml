@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app_javafx.controller.MainController">
+    <padding>
+        <Insets bottom="15" left="15" right="15" top="15" />
+    </padding>
+   <StackPane>
+      <children>
+
+          <!-- Заголовок -->
+          <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Rick and Morty" />
+      </children>
+   </StackPane>
+   <StackPane>
+      <children>
+           <Button fx:id="fetchButton" alignment="CENTER" contentDisplay="CENTER" onAction="#handleFetchCharacters" style="-fx-font-size: 14px; -fx-pref-width: 180px;" text="Загрузить персонажей" />
+      </children>
+   </StackPane>
+
+    <!-- Основной контейнер -->
+    <HBox spacing="15" VBox.vgrow="ALWAYS">
+        <!-- Список персонажей -->
+        <VBox prefWidth="300" spacing="5">
+            <ListView fx:id="characterListView" VBox.vgrow="ALWAYS" />
+        </VBox>
+
+        <!-- Детали персонажа -->
+        <VBox prefWidth="300" spacing="10">
+         <StackPane>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <children>
+                  <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Детали персонажа" />
+            </children>
+         </StackPane>
+         <StackPane>
+            <children>
+      
+                              <!-- Изображение -->
+                  <ImageView fx:id="characterImage" fitHeight="280" fitWidth="280" preserveRatio="true">
+                      <Image url="https://via.placeholder.com/300x300?text=No+Image" />
+                  </ImageView>
+            </children>
+         </StackPane>
+
+            <!-- Информация -->
+            <VBox spacing="5" style="-fx-padding: 10; -fx-background-color: #f0f0f0; -fx-background-radius: 5;">
+                <Label style="-fx-font-weight: bold;" text="Имя:" />
+                <Label fx:id="detailsName" style="-fx-font-size: 14px;" text="Не выбран" />
+
+                <Separator />
+
+                <Label style="-fx-font-weight: bold;" text="Статус:" />
+                <Label fx:id="detailsStatus" style="-fx-font-size: 14px;" text="Не выбран" />
+
+                <Separator />
+
+                <Label style="-fx-font-weight: bold;" text="Вид:" />
+                <Label fx:id="detailsSpecies" style="-fx-font-size: 14px;" text="Не выбран" />
+            </VBox>
+        </VBox>
+    </HBox>
+</VBox>
